@@ -1,0 +1,22 @@
+version: "2"
+services:
+  app: 
+    container_name: app
+    restart: always
+    build: .
+    ports:
+      - "3000:3050"
+    links:
+      - mongo_fcamara
+  mongo_fcamara:     
+    container_name: mongo_fcamara
+    image: tutum/mongodb 
+    ports:
+      - "27017:27017"
+      - "28017:28017"
+    volumes:
+      - 'C:\data\db3:/data/db'
+    environment:
+      - AUTH=no
+      
+    

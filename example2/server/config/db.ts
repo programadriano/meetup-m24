@@ -1,11 +1,10 @@
 import * as mongoose from "mongoose";
 
-class Database {
-  //private DB_URI = 'mongodb://user:password@127.0.0.1:27017/admin';
-  private DB_URI = "mongodb://localhost:27017/db_videos";
+class Database { 
+  private DB_URI = "mongodb://127.0.0.1:27017/admin";
   private DB_CONNECTION;
 
-  constructor() { }
+  constructor() {}
 
   createConnection() {
     mongoose.connect(this.DB_URI);
