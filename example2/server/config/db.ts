@@ -1,7 +1,7 @@
 import * as mongoose from "mongoose";
 
 class Database { 
-  private DB_URI = "mongodb://127.0.0.1:27017/admin";
+  private DB_URI = "mongodb://mongo_fcamara/admin";
   private DB_CONNECTION;
 
   constructor() {}
